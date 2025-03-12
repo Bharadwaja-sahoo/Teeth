@@ -1,3 +1,4 @@
+AOS.init();
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: '.main',
