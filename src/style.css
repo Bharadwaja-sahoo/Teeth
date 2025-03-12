@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #fff;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h2 {
+    font-family: "Big Shoulders", sans-serif;
+    font-size: 100px;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+.main h2 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hover{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hover p{
+    font-size: 18px;
+    background-color: #ffffff3c;
+    backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+}
+
+.teeth-container {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(16, 50px);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+#upper-teeth .tooth,
+#lower-teeth .tooth {
+    width: 50px;
+    height: 75px;
+    background-color: #fdfff6c2;
+    backdrop-filter: blur(10px);
+    border: 2px solid #fff;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50% 50% 30% 30%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0;
+    filter: blur(10px);
+    box-shadow: 0px 0px 5px #fff;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+#lower-teeth .tooth {
+    rotate: 180deg;
+}
+
+/* .tooth::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            width: 70%;
+            height: 15px;
+            background-color: white;
+            border-radius: 50%;
+            border: 2px solid black;
+        }*/
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 252, 252, 0.224);
+    backdrop-filter: blur(10px);
+    border: 1px solid #fff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    margin-bottom: 10px;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+#lower-teeth .tooltip {
+    rotate: 180deg;
+    margin-left: -150px;
+}
+
+.tooth:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tooth:hover {
+    overflow: unset !important;
+    transform: scale(1.1);
+    background-color: #fff;
+}
+
+.text {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.text1,
+.text2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text2 p {
+    width: 80%;
+}
